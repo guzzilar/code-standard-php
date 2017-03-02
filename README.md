@@ -489,3 +489,62 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
   --
 
   13. **Consider to use [Tell, Don't Ask principle](https://pragprog.com/articles/tell-dont-ask)**
+
+  --
+
+  14. **Avoid using `boolean` as one of a parameter.**  
+    _added on Mar 2, 2017_
+
+    _Hmmm_
+    ```php
+    /**
+     * @param string $id
+     * @param bool   $include_header
+     * @param bool   $include_footer
+     */
+    public function exportData($id, $include_header = false, $include_footer = false)
+    {
+        // ...
+    }
+    ```
+    _Better_
+    ```php
+    public function includeHeader()
+    {
+        // ...
+    }
+
+    public function includeFooter()
+    {
+        // ...
+    }
+
+    /**
+     * @param string $id
+     */
+    public function exportData($id)
+    {
+        // ...
+    }
+    ```
+
+    > _**Why?**_  
+    > _Boolean is not clear enough if you consider from a caller side._  
+    > _As from the example above, let's execute it._
+    >
+    > ```php
+    > $exporter = new Exporter;
+    > $exporter->exportData('report_a', true, false);
+    > ```
+    >
+    > Now let's assume that you never see the example code before, can you guess an output from the 2nd and 3rd parameters?
+    >
+    > How about this one,
+    >
+    > ```php
+    > $exporter = new Exporter;
+    > $exporter
+    >     ->includeHeader()
+    >     ->includeFooter()
+    >     ->exportData('report_a');
+    > ```
