@@ -509,21 +509,32 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     ```
     _Better_
     ```php
-    public function includeHeader()
-    {
-        // ...
-    }
-
-    public function includeFooter()
-    {
-        // ...
-    }
-
     /**
      * @param string $id
+     * @param array  $config
      */
-    public function exportData($id)
+    public function exportData($id, $config = array())
     {
+        // ...
+    }
+    ```
+    _Even Better_
+    ```php
+    class Exporter
+    {
+        public function __construct(\Template $template)
+        {
+            // ...
+        }
+
+        /**
+         * @param string $id
+         */
+        public function exportData($id)
+        {
+            $this->template->generate(...);
+        }
+
         // ...
     }
     ```
@@ -534,7 +545,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     >
     > ```php
     > $exporter = new Exporter;
-    > $exporter->exportData('report_a', true, false);
+    > $exporter->exportData('report_id', true, false);
     > ```
     >
     > Now let's assume that you never see the example code before, can you guess an output from the 2nd and 3rd parameters?
@@ -543,8 +554,18 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     >
     > ```php
     > $exporter = new Exporter;
-    > $exporter
-    >     ->includeHeader()
-    >     ->includeFooter()
-    >     ->exportData('report_a');
+    > $exporter->exportData('report_id', array('includeHeader' => true, 'includeFooter' => false)
     > ```
+    >
+    > Or even you can go with the 'Even Better' approach.
+    >
+    > ```php
+    > $exporter = new Exporter(Template::include('header', 'footer'));
+    > $exporter->exportData('report_id');
+    > ```
+    >
+    > That we can take a responsibility to determine using template out from the Exporter class.
+    > Which is we can apply a 'Single Responsibility' principle here.  
+    > And since you do dependency injection by passing a Template class. Now you can easily mock a Template class when write a test, or even turn that class to an interface class that you can take-in/out any template you want without any effect to the gathering data part.
+
+    _suggested solution by [@robinclart](https://github.com/robinclart) as from a discussion at [issue#1](https://github.com/guzzilar/code-standard-php/issues/1)_
