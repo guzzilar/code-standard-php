@@ -2,7 +2,7 @@
 
 Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-fig.org/psr/psr-2/)
 
-  1. **Comment block, have 1 break line in every tags.**
+1. **Comment block, have 1 break line in every tags.**
   
     _Hmmm_
     ```php
@@ -73,7 +73,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  2. **For any methods in a class, must provide at least a `@param` document if that method is defined an argument unless you use `type-hint`**
+2. **For any methods in a class, must provide at least a `@param` document if that method is defined an argument unless you use `type-hint`**
 
     _Hmmm_
     ```php
@@ -139,7 +139,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     
   --
 
-  3. **1 space between `!condition`.**
+3. **1 space between `!condition`.**
   
     _Hmmm_
     ```php
@@ -159,7 +159,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  4. **No shorthand syntax for a conditional block.**
+4. **No shorthand syntax for a conditional block.**
   
     _Hmmm_
     ```php
@@ -183,11 +183,11 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  5. **Always has 1 breakline at the end of a file.**
+5. **Always has 1 breakline at the end of a file.**
 
   --
 
-  6. **Formatting code vertically alignment (nice to have)**
+6. **Formatting code vertically alignment (nice to have)**
   
     _Hmmm_
     ```php
@@ -212,7 +212,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  7. **Continue from 5th. If 2 part of code contexts seems different, they don't need to do vertically alignment to each other.**
+7. **Continue from 5th. If 2 part of code contexts seems different, they don't need to do vertically alignment to each other.**
   
     _Hmmm_
     ```php
@@ -252,7 +252,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  8. **1 space for variable string concatenation**
+8. **1 space for variable string concatenation**
   
     _Hmmm_
     ```php
@@ -276,7 +276,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
   
-  9. **Avoid `getter` and `setter` if those methods do nothing more than serving private property.**
+9. **Avoid `getter` and `setter` if those methods do nothing more than serving private property.**
 
     _Hmmm_
     ```php
@@ -434,7 +434,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     }
     ```
 
-  10. **Use `@test` tag for test method.**
+10. **Use `@test` tag for test method.**
   
     _Hmmm_
     ```php
@@ -459,7 +459,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --  
 
-  11. **Just use normal-human english sentence style for a test case**
+11. **Just use normal-human english sentence style for a test case**
   
     _Hmmm_
     ```php
@@ -484,15 +484,15 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
 
   --
 
-  12. **Consider to use [SOLID principle](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). Especially, a Single Responsibility principle.**
+12. **Consider to use [SOLID principle](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). Especially, a Single Responsibility principle.**
 
   --
 
-  13. **Consider to use [Tell, Don't Ask principle](https://pragprog.com/articles/tell-dont-ask)**
+13. **Consider to use [Tell, Don't Ask principle](https://pragprog.com/articles/tell-dont-ask)**
 
   --
 
-  14. **Avoid using `boolean` as one of a parameter.**  
+14. **Avoid using `boolean` as one of a parameter.**  
     _added on Mar 2, 2017_
 
     _Hmmm_
