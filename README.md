@@ -157,6 +157,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
+    _Inspired by http://github.com/laravel/framework project._
   ---
 
 4. **No shorthand syntax for a conditional block.**
