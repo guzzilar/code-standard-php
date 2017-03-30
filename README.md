@@ -71,7 +71,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > }
     > ```
 
-  --
+  ---
 
 2. **For any methods in a class, must provide at least a `@param` document if that method is defined an argument unless you use `type-hint`**
 
@@ -137,7 +137,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > }
     > ```
     
-  --
+  ---
 
 3. **1 space between `!condition`.**
   
@@ -157,7 +157,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
-  --
+  ---
 
 4. **No shorthand syntax for a conditional block.**
   
@@ -181,11 +181,11 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _Or if you want to go with the second style, just also go with it for your whole project._  
     > _(so I just picked second, to avoid some unintensionally mistake from brackets)._
 
-  --
+  ---
 
 5. **Always has 1 breakline at the end of a file.**
 
-  --
+  ---
 
 6. **Formatting code vertically alignment (nice to have)**
   
@@ -210,7 +210,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
-  --
+  ---
 
 7. **Continue from 5th. If 2 part of code contexts seems different, they don't need to do vertically alignment to each other.**
   
@@ -250,7 +250,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
-  --
+  ---
 
 8. **1 space for variable string concatenation**
   
@@ -274,7 +274,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
-  --
+  ---
   
 9. **Avoid `getter` and `setter` if those methods do nothing more than serving private property.**
 
@@ -434,6 +434,8 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     }
     ```
 
+  ---
+
 10. **Use `@test` tag for test method.**
   
     _Hmmm_
@@ -457,7 +459,7 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     > _**Why?**_  
     > _To increase readability of a code._  
 
-  --  
+  ---  
 
 11. **Just use normal-human english sentence style for a test case**
   
@@ -482,15 +484,15 @@ Extends from [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-
     }
     ```
 
-  --
+  ---
 
 12. **Consider to use [SOLID principle](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). Especially, a Single Responsibility principle.**
 
-  --
+  ---
 
 13. **Consider to use [Tell, Don't Ask principle](https://pragprog.com/articles/tell-dont-ask)**
 
-  --
+  ---
 
 14. **Avoid using `boolean` as one of a parameter.**  
     _added on Mar 2, 2017_
